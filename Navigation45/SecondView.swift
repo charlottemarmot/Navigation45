@@ -9,8 +9,21 @@ import SwiftUI
 
 struct SecondView: View {
     var body: some View {
-        Text("You've arrived to the Second View 🎊")
+       
+        
+        NavigationStack {
+            Text("You've arrived to the Second View 🎊")
+            
+                .navigationTitle("About")
+                .navigationBarTitleDisplayMode(.inline)
+            NavigationLink(destination: ThirdView()) {
+               Text("Click me!")
+            }
+
+            
+        }//end of the NavigationStack
     }
+    
 }
 
 #Preview {
